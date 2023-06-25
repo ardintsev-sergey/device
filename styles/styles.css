@@ -275,7 +275,7 @@ ul {
 .service-item::after,
 /* .catalog-button::after, */
 .about-details::after,
-.contacts-mail::after {
+.contacts-mail::after, .modal-send-btn::after {
   position: absolute;
   left: 0;
   top: 35%;
@@ -650,6 +650,128 @@ ul {
   color: #000;
   text-decoration: none;
 }
+
+/* modal */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  /* box-sizing: border-box; */
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 72px 80px;
+  background-color: #FFFFFF;
+}
+
+.modal-delivery {
+  width: 920px;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 84px;
+  right: 80px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  background-image: url("../img/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 42px;
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.modal-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.modal-label {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  width: 47.4%;
+  margin-bottom: 42px;
+}
+
+.modal-input {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  border: none;
+  background-color: #F0F0F0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.modal-input-title {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.modal-label-textarea {
+  width: 71%;
+}
+
+.modal-label-count {
+  width: 23.7%;
+}
+
+.modal-input-count {
+  width: 60px;
+}
+
+.modal-count {
+  display: flex;
+}
+
+.modal-count-btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  background-color: #F0F0F0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.modal-send-btn {
+  position: relative;
+  margin: 0;
+  /* padding: 0; */
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  height: 40px;
+  width: 190px;
+  z-index: 0;
+  padding:  4.5px 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 
 /* catalog */
 .catalog {
