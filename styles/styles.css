@@ -218,6 +218,83 @@ ul {
   margin-right: 40px;
 }
 
+.slider-img {
+  display: block;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-controls {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  padding-left: 30px;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.slider-btn {
+  width: 20px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-image: url("../img/arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-btn:hover, .slider-pagination-btn:hover {
+  opacity: 0.6;
+}
+
+.slider-btn:active, .slider-pagination-btn:active {
+  opacity: 0.3;
+}
+
+.slider-btn:focus, .slider-pagination-btn:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.slider-btn:disabled, .slider-pagination-btn:disabled {
+  opacity: 0.1;
+}
+
+.device-slider-next {
+  transform: rotate(180deg);
+}
+
+.slider-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.slider-pagination-item {
+  margin: 0 20px;
+}
+
+.slider-pagination-btn {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-pagination-btn-current {
+  background-color: #000;
+}
+
 .device-about {
   padding-top: 100px;
 }
@@ -661,7 +738,10 @@ ul {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 10;
-  /* box-sizing: border-box; */
+}
+
+.modal-container-close {
+  display: none;
 }
 
 .modal {
@@ -706,7 +786,9 @@ ul {
   justify-content: space-between;
 }
 
-.modal-label {
+.modal-field-group {
+  margin: 0;
+  padding: 0;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   font-weight: bold;
@@ -723,16 +805,16 @@ ul {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.modal-input-title {
+.modal-label {
   display: block;
   margin-bottom: 14px;
 }
 
-.modal-label-textarea {
+.modal-field-textarea {
   width: 71%;
 }
 
-.modal-label-count {
+.modal-field-count {
   width: 23.7%;
 }
 
