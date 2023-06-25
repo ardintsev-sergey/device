@@ -434,7 +434,7 @@ ul {
 
 .device-details::after,
 .service-item::after,
-/* .catalog-button::after, */
+.catalog-button::after,
 .about-details::after,
 .contacts-mail::after, .modal-send-btn::after {
   position: absolute;
@@ -993,12 +993,84 @@ ul {
 
 .catalog-filters {
   width: 320px;
-  /* flex-shrink: 0; */
   padding: 25px 60px;
 }
 
 .catalog-title {
   margin: 0;
+  margin-bottom: 35px;
+}
+
+.range-scale {
+  position: relative;
+  height: 2px;
+  margin-bottom: 16px;
+  background-color:#DCDCDC;;
+  border-radius: 2px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: #000;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
+}
+
+.catalog-filter-label {
+  display: flex;
+  margin-right: 5px;
+}
+
+.range-input {
+  width: 30px;
+  padding: 0 2px;
+  font: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #EBEBEB;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.range-toggle:hover {
+  opacity: 0.5;
+}
+
+.range-toggle:active {
+  background: #000;
+}
+
+.range-toggle:focus {
+  outline: #AF4FFF solid 2px;
 }
 
 .catalog-wrapper {
@@ -1009,12 +1081,16 @@ ul {
 
 .catalog-filter-group {
   border: none;
-  border-top: 2px solid #000000;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 35px;
+  /* border-top: 2px solid #000000; */
 }
 
 .catalog-filter-title {
   font-weight: 700;
   line-height: 20px;
+  margin-bottom: 20px;
 }
 
 .catalog-filter-label,
@@ -1022,15 +1098,56 @@ ul {
   font-size: 15px;
   opacity: 0.3;
 }
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+}
+
+.control-input:checked + .control-mark::before {
+  position: absolute;
+  top: -8px;
+  left: 3px;
+  content: url(../img/tick.svg);
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  top: -3px;
+  left: -2px;
+  content: url(../img/radio.svg);
+}
+
+.control-label {
+  color: #000;
+}
+
+.sorting-form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
 .select-control {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  margin-left: auto;
   border: none;
   background-color: transparent;
+  padding-right: 20px;
 }
 
 .catalog-sorting {

@@ -169,35 +169,27 @@
             >
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Стоимость</legend>
-                <button class="range-toggle toggle-min" type="button">
-                  <span class="visually-hidden"
-                    >Изменить минимальную цену.</span
-                  >
-                </button>
-                <button class="range-toggle toggle-max" type="button">
-                  <span class="visually-hidden"
-                    >Изменить максимальную цену.</span
-                  >
-                </button>
-                <label class="catalog-filter-label">
-                  от
-                  <input
-                    class="catalog-filter-input"
-                    type="number"
-                    name="min-price"
-                    placeholder="0"
-                  />
-                </label>
+                <div class="range">
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 0px; width: 119px">
+                      <button class="range-toggle toggle-min">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="range-toggle toggle-max">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
+                  </div>
 
-                <label class="catalog-filter-label">
-                  до
-                  <input
-                    class="catalog-filter-input"
-                    type="number"
-                    name="max-price"
-                    placeholder="5000"
-                  />
-                </label>
+                  <div class="range-wrapper-inputs">
+                    <label class="catalog-filter-label">
+                      от <input class="range-input" type="number" value="50" name="min-price"> ₽
+                    </label>
+                    <label class="catalog-filter-label">
+                      до <input class="range-input" type="number" value="1500" name="max-price" style="width: 37px"> ₽
+                    </label>
+                  </div>
+                </div>
               </fieldset>
 
               <fieldset class="catalog-filter-group">
@@ -205,12 +197,7 @@
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input
-                        class="visually-hidden control-input"
-                        type="checkbox"
-                        name="color-black"
-                        checked
-                      />
+                      <input class="visually-hidden control-input" type="checkbox" name="color-black" checked>
                       <span class="control-mark"></span>
                       <span class="control-label">Черный</span>
                     </label>
@@ -311,17 +298,17 @@
                 <button class="visually-hidden" type="submit">
                   Отсортировать продукты
                 </button>
+                <div>
+                  <button href="#" class="button button-up">
+                    <img src="img/sort-up.svg" alt="" />
+                    <span class="visually-hidden">По возрастанию</span>
+                  </button>
+                  <button class="button button-down" href="#">
+                    <img src="img/sort-up.svg" alt="" />
+                    <span class="visually-hidden">По убыванию</span>
+                  </button>
+                </div>
               </form>
-              <div>
-                <button href="#" class="button button-up">
-                  <img src="img/sort-up.svg" alt="" />
-                  <span class="visually-hidden">По возрастанию</span>
-                </button>
-                <button class="button button-down" href="#">
-                  <img src="img/sort-up.svg" alt="" />
-                  <span class="visually-hidden">По убыванию</span>
-                </button>
-              </div>
             </div>
 
             <div class="catalog-products">
